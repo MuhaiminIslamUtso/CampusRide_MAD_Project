@@ -59,7 +59,7 @@ export default function RiderDashboardScreen() {
         </View>
         <TouchableOpacity
           style={styles.adminSwitchBtn}
-          onPress={() => router.push('/(tabs)/admin' as any)}
+          onPress={() => router.push('/admin' as any)}
         >
           <Ionicons name="shield-outline" size={16} color="#0D9488" />
           <Text style={styles.adminSwitchText}>Admin Panel</Text>
