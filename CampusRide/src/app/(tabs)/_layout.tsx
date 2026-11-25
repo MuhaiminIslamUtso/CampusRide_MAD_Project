@@ -48,13 +48,6 @@ export default function TabsLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="admin"
-        options={{
-          title: 'Admin',
-          href: null, // Routable via button but hidden from main passenger tab bar
-        }}
-      />
     </Tabs>
   );
 }
