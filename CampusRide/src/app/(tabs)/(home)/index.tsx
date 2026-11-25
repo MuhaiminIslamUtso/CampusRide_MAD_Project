@@ -59,14 +59,24 @@ export default function ActiveBookingScreen() {
                     <Text style={styles.appName}>CampusRide</Text>
                     <Text style={styles.tagline}>AIUB Verified Student Commute</Text>
                 </View>
-                <TouchableOpacity
-                    style={styles.historyBtn}
-                    onPress={() => router.push("/history")}
-                    activeOpacity={0.7}
-                >
-                    <Ionicons name="time-outline" size={18} color="#0D9488" />
-                    <Text style={styles.historyBtnText}>History</Text>
-                </TouchableOpacity>
+                <View style={{ flexDirection: 'row', gap: 8 }}>
+                    <TouchableOpacity
+                        style={styles.historyBtn}
+                        onPress={() => router.push("/(auth)/login")}
+                        activeOpacity={0.7}
+                    >
+                        <Ionicons name="person-outline" size={16} color="#0D9488" />
+                        <Text style={styles.historyBtnText}>Auth</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.historyBtn}
+                        onPress={() => router.push("/history")}
+                        activeOpacity={0.7}
+                    >
+                        <Ionicons name="time-outline" size={18} color="#0D9488" />
+                        <Text style={styles.historyBtnText}>History</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
 
             <ScrollView
@@ -76,8 +86,12 @@ export default function ActiveBookingScreen() {
                 {/* Interactive Map Section */}
                 <MapSimulationView pickup={pickup} destination={destination} />
 
-                {/* Location Selection Box */}
-                <View style={styles.locationCard}>
+                {/* Location Selection Box - Tap to customize via LocationPicker */}
+                <TouchableOpacity
+                    style={styles.locationCard}
+                    onPress={() => router.push("/(tabs)/(home)/location-picker")}
+                    activeOpacity={0.9}
+                >
                     <View style={styles.locationRow}>
                         <View style={styles.iconCircleGreen}>
                             <Ionicons name="radio-button-on" size={14} color="#0D9488" />
@@ -113,7 +127,7 @@ export default function ActiveBookingScreen() {
                             <Text style={styles.locationSub}>{destination.address}</Text>
                         </View>
                     </View>
-                </View>
+                </TouchableOpacity>
 
                 {/* Distance & Student Security Note */}
                 <View style={styles.securityBanner}>
