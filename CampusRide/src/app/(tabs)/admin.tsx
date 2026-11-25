@@ -10,8 +10,8 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { useRiderAdmin } from '@/context/rider-admin-context';
-import { VerificationRequest } from '@/data/rider-admin';
+import { useRiderAdmin } from '../../context/rider-admin-context';
+import { VerificationRequest } from '../../data/rider-admin';
 
 export default function AdminScreen() {
   const { state, updateVerification } = useRiderAdmin();
