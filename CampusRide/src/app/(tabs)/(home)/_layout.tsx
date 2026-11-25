@@ -14,6 +14,7 @@ export default function HomeStackLayout() {
       <Stack.Screen name="location-picker" options={{ title: 'Select Route' }} />
       <Stack.Screen name="live-tracking" options={{ title: 'Live Ride Tracking' }} />
       <Stack.Screen name="trip-receipt" options={{ title: 'Trip Receipt' }} />
+      <Stack.Screen name="feedback" options={{ title: 'Incident & Ratings' }} />
     </Stack>
   );
 }

@@ -1,8 +1,8 @@
-import { AuthProvider } from "@/context/auth-context";
-import { RideProvider } from "@/context/ride-context";
-import { RiderAdminProvider } from "@/context/rider-admin-context";
-import { Stack } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
+import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
+import { RideProvider } from '@/context/ride-context';
+import { AuthProvider } from '@/context/auth-context';
+import { RiderAdminProvider } from '@/context/rider-admin-context';
 
 SplashScreen.preventAutoHideAsync();
 
